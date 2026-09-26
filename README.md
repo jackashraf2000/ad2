@@ -1,1 +1,74 @@
-# ad2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers</title>
+    <style>
+        /* إعدادات الشاشة لجعل الزر في المنتصف تماماً */
+        body { 
+            margin: 0; 
+            padding: 0;
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: #2c3e50; /* لون خلفية داكن وأنيق */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* تصميم الزر */
+        .action-button {
+            padding: 20px 60px;
+            background-color: #ff9900; /* لون أمازون */
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* تأثير عند مرور الماوس فوق الزر */
+        .action-button:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+        }
+
+        /* تأثير عند الضغط الفعلي على الزر */
+        .action-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الزر الوحيد في الصفحة -->
+    <button class="action-button">Press Here</button>
+
+    <!-- سكريبت الفتح التلقائي المتسلسل -->
+    <script>
+        const myPinterestAds = [
+            "https://pin.it/4xbY20lzh",
+            "https://pin.it/72xpNqHsi",
+            "https://pin.it/3UP33Fuis"
+        ];
+
+        let currentAdIndex = 0;
+
+        // تفعيل الفتح عند الضغط في أي مكان بالشاشة (بما في ذلك الزر)
+        document.addEventListener('click', function() {
+            if (currentAdIndex < myPinterestAds.length) {
+                window.open(myPinterestAds[currentAdIndex], '_blank');
+                currentAdIndex++; 
+            }
+        });
+    </script>
+
+</body>
+</html># ad2
